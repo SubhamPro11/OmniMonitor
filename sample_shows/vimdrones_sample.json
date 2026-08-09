@@ -1,0 +1,144 @@
+{
+  "format": "vimdrones_designer_export",
+  "version": "1.0",
+  "show_name": "Vimdrones Helix Choreography",
+  "frame_rate": 24,
+  "frame_start": 1,
+  "frame_end": 1440,
+  "duration_ms": 60000,
+  "drone_count": 12,
+  "drones": [
+    {
+      "drone_id": "DRONE-01",
+      "object_name": "Drone_Lead_01",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 0.0, "y": 14.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 14.0, "y": 0.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 0.0, "y": -14.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": -14.0, "y": 0.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 0.0, "y": 14.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-02",
+      "object_name": "Drone_Lead_02",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 7.0, "y": 12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 12.1, "y": -7.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": -7.0, "y": -12.1, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": -12.1, "y": 7.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 7.0, "y": 12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-03",
+      "object_name": "Drone_Lead_03",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 12.1, "y": 7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 7.0, "y": -12.1, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": -12.1, "y": -7.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": -7.0, "y": 12.1, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 12.1, "y": 7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-04",
+      "object_name": "Drone_Lead_04",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 14.0, "y": 0.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 0.0, "y": -14.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": -14.0, "y": 0.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 0.0, "y": 14.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 14.0, "y": 0.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-05",
+      "object_name": "Drone_Lead_05",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 12.1, "y": -7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": -7.0, "y": -12.1, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": -12.1, "y": 7.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 7.0, "y": 12.1, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 12.1, "y": -7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-06",
+      "object_name": "Drone_Lead_06",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 7.0, "y": -12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": -12.1, "y": -7.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": -7.0, "y": 12.1, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 12.1, "y": 7.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 7.0, "y": -12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-07",
+      "object_name": "Drone_Lead_07",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 0.0, "y": -14.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": -14.0, "y": 0.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 0.0, "y": 14.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 14.0, "y": 0.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 0.0, "y": -14.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-08",
+      "object_name": "Drone_Lead_08",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": -7.0, "y": -12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": -12.1, "y": 7.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 7.0, "y": 12.1, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 12.1, "y": -7.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": -7.0, "y": -12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-09",
+      "object_name": "Drone_Lead_09",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": -12.1, "y": -7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": -7.0, "y": 12.1, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 12.1, "y": 7.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 7.0, "y": -12.1, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": -12.1, "y": -7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-10",
+      "object_name": "Drone_Lead_10",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": -14.0, "y": 0.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 0.0, "y": 14.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 14.0, "y": 0.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": 0.0, "y": -14.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": -14.0, "y": 0.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-11",
+      "object_name": "Drone_Lead_11",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": -12.1, "y": 7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 7.0, "y": 12.1, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 12.1, "y": -7.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": -7.0, "y": -12.1, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": -12.1, "y": 7.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    },
+    {
+      "drone_id": "DRONE-12",
+      "object_name": "Drone_Lead_12",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": -7.0, "y": 12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 12.1, "y": 7.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 7.0, "y": -12.1, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": -12.1, "y": -7.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": -7.0, "y": 12.1, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    }
+  ]
+}

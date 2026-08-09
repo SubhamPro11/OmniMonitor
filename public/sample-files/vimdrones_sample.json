@@ -1,0 +1,23 @@
+{
+  "format": "vimdrones_designer_export",
+  "version": "1.0",
+  "show_name": "Vimdrones Helix Choreography",
+  "frame_rate": 24,
+  "frame_start": 1,
+  "frame_end": 1440,
+  "duration_ms": 60000,
+  "drone_count": 12,
+  "drones": [
+    {
+      "drone_id": "DRONE-01",
+      "object_name": "Drone_Lead_01",
+      "keyframes": [
+        { "t_offset_ms": 0, "x": 0.0, "y": 14.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 },
+        { "t_offset_ms": 15000, "x": 14.0, "y": 0.0, "z": 30.0, "r": 255, "g": 180, "b": 0, "brightness": 100 },
+        { "t_offset_ms": 30000, "x": 0.0, "y": -14.0, "z": 40.0, "r": 0, "g": 255, "b": 150, "brightness": 100 },
+        { "t_offset_ms": 45000, "x": -14.0, "y": 0.0, "z": 30.0, "r": 0, "g": 150, "b": 255, "brightness": 100 },
+        { "t_offset_ms": 60000, "x": 0.0, "y": 14.0, "z": 22.0, "r": 255, "g": 0, "b": 100, "brightness": 100 }
+      ]
+    }
+  ]
+}
