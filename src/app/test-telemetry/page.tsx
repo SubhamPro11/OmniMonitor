@@ -145,27 +145,27 @@ export default function TestTelemetryPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#060911] text-slate-100 p-4 md:p-8 max-w-[1600px] mx-auto flex flex-col gap-6">
+    <main className="min-h-screen bg-[#1e1e1e] text-[#f0f6fc] p-4 md:p-8 max-w-[1600px] mx-auto flex flex-col gap-6">
       {/* Header Bar */}
-      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#1e2c4a] pb-4">
+      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#333333] pb-4">
         <div>
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="text-xs font-mono text-slate-400 hover:text-amber-400 border border-slate-700 bg-slate-900 px-2 py-1 rounded transition-colors"
+              className="text-xs font-mono text-[#94a3b8] hover:text-[#4ade80] border border-[#1e2d4a] bg-[#10192e] px-2 py-1 rounded transition-colors"
             >
               ← Overview
             </Link>
-            <h1 className="text-xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-amber-400 animate-pulse" />
-              Internal Telemetry Ingestion Verification
-              <span className="text-xs font-mono px-2 py-0.5 rounded bg-amber-950/40 text-amber-300 border border-amber-800/50">
+            <h1 className="text-xl font-bold tracking-tight text-[#f1f5f9] flex items-center gap-2">
+              <Activity className="w-5 h-5 text-[#22c55e] animate-pulse" />
+              Fleet Simulator & Ingestion Diagnostics
+              <span className="text-xs font-mono px-2 py-0.5 rounded bg-[#22c55e]/10 text-[#4ade80] border border-[#22c55e]/30">
                 SECTION 2
               </span>
             </h1>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
-            Validating 5Hz live telemetry ingestion, ring buffer storage, and fault injection controls before dashboard & adapter builds.
+          <p className="text-xs text-[#94a3b8] mt-1">
+            Real-time multi-drone kinematic telemetry stream receiver (~5Hz) with dynamic fault injection and error diagnostics.
           </p>
         </div>
 

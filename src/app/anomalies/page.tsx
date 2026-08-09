@@ -96,43 +96,43 @@ export default function AnomaliesPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#060911] text-slate-100 p-4 md:p-8 max-w-[1600px] mx-auto flex flex-col gap-6">
-      {/* Header Navigation */}
-      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#1e2c4a] pb-4">
+    <main className="min-h-screen bg-[#1e1e1e] text-[#f0f6fc] p-4 md:p-8 max-w-[1600px] mx-auto flex flex-col gap-6">
+      {/* Header Bar */}
+      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#333333] pb-4">
         <div>
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="text-xs font-mono text-slate-400 hover:text-amber-400 border border-slate-700 bg-slate-900 px-2 py-1 rounded transition-colors"
+              className="text-xs font-mono text-[#94a3b8] hover:text-[#4ade80] border border-[#1e2d4a] bg-[#10192e] px-2 py-1 rounded transition-colors"
             >
               ← Overview
             </Link>
-            <h1 className="text-xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
-              <ShieldAlert className="w-5 h-5 text-amber-400" />
-              Rule-Based Anomaly Detection & Fault Stream
-              <span className="text-xs font-mono px-2 py-0.5 rounded bg-amber-950/40 text-amber-300 border border-amber-800/50">
+            <h1 className="text-xl font-bold tracking-tight text-[#f1f5f9] flex items-center gap-2">
+              <ShieldAlert className="w-5 h-5 text-[#22c55e]" />
+              Rule-Based Anomaly Detection Cockpit
+              <span className="text-xs font-mono px-2 py-0.5 rounded bg-[#22c55e]/10 text-[#4ade80] border border-[#22c55e]/30">
                 SECTION 5
               </span>
             </h1>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
-            Tunable, debounced threshold monitoring classifying health drops into pending fault events (2 consecutive readings debounce).
+          <p className="text-xs text-[#94a3b8] mt-1">
+            Independent debounce-filtered anomaly detection. Classifies telemetry deviations into warning & critical fault events.
           </p>
         </div>
 
         <div className="flex items-center gap-2 font-mono text-xs">
           <button
             onClick={() => setShowConfigDrawer(!showConfigDrawer)}
-            className="px-3 py-1.5 bg-[#0a0f1d] hover:bg-slate-800 text-slate-200 rounded border border-[#1e2c4a] transition-colors flex items-center gap-1.5"
+            className="px-3 py-1.5 bg-[#10192e] hover:bg-[#17233f] text-[#f1f5f9] rounded border border-[#1e2d4a] transition-colors flex items-center gap-1.5"
           >
-            <SlidersHorizontal className="w-3.5 h-3.5 text-amber-400" />
+            <SlidersHorizontal className="w-3.5 h-3.5 text-[#4ade80]" />
             Tune Thresholds ({showConfigDrawer ? "Hide" : "Edit"})
           </button>
           <Link
             href="/monitoring"
-            className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded border border-slate-700 transition-colors flex items-center gap-1.5"
+            className="px-3 py-1.5 bg-[#10192e] hover:bg-[#17233f] text-[#f1f5f9] rounded border border-[#1e2d4a] transition-colors flex items-center gap-1.5"
           >
-            <Activity className="w-3.5 h-3.5 text-emerald-400" />
+            <Activity className="w-3.5 h-3.5 text-[#4ade80]" />
             Live Health Scores →
           </Link>
         </div>

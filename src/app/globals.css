@@ -1,82 +1,97 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cockpit-950: #060911;
-  --color-cockpit-900: #0a0f1d;
-  --color-cockpit-850: #0f172a;
-  --color-cockpit-800: #162038;
-  --color-cockpit-700: #202e4f;
-  --color-cockpit-600: #2d3f6b;
-  --color-cockpit-border: #1e2c4a;
-  --color-cockpit-border-subtle: #152037;
+  /* Dark Navy Cockpit Base */
+  --color-cockpit-950: #050811;
+  --color-cockpit-900: #070b14;
+  --color-cockpit-850: #0b1120;
+  --color-cockpit-800: #10192e;
+  --color-cockpit-700: #17233f;
+  --color-cockpit-600: #1f3056;
+  --color-cockpit-border: #1e2d4a;
+  --color-cockpit-border-subtle: #141f33;
 
-  --color-status-healthy: #10b981;
-  --color-status-healthy-dim: rgba(16, 185, 129, 0.12);
-  --color-status-healthy-border: rgba(16, 185, 129, 0.35);
+  /* Lime-Green Primary Accent (Terminal Aesthetic) */
+  --color-terminal-lime: #22c55e;
+  --color-terminal-lime-bright: #4ade80;
+  --color-terminal-lime-dim: rgba(34, 197, 94, 0.12);
+  --color-terminal-lime-border: rgba(34, 197, 94, 0.35);
 
+  /* Explicit Status Color System (Token Set) */
+  /* 1. Healthy / Nominal -> Lime Green */
+  --color-status-healthy: #22c55e;
+  --color-status-healthy-bright: #4ade80;
+  --color-status-healthy-dim: rgba(34, 197, 94, 0.12);
+  --color-status-healthy-border: rgba(34, 197, 94, 0.35);
+
+  /* 2. Warning / Degraded -> Amber */
   --color-status-warning: #f59e0b;
+  --color-status-warning-bright: #fbbf24;
   --color-status-warning-dim: rgba(245, 158, 11, 0.12);
   --color-status-warning-border: rgba(245, 158, 11, 0.35);
 
+  /* 3. Fault / Critical -> Red */
   --color-status-critical: #ef4444;
+  --color-status-critical-bright: #f87171;
   --color-status-critical-dim: rgba(239, 68, 68, 0.15);
   --color-status-critical-border: rgba(239, 68, 68, 0.4);
 
+  /* 4. Neutral / Muted -> Slate */
   --color-status-neutral: #64748b;
   --color-status-neutral-dim: rgba(100, 116, 139, 0.12);
 
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 :root {
-  --background: #060911;
+  --background: #070b14;
   --foreground: #f1f5f9;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   background-image: 
-    linear-gradient(to right, rgba(30, 44, 74, 0.2) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 44, 74, 0.2) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(to right, rgba(30, 45, 74, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 45, 74, 0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Tabular figures for rock-solid non-jumping numeric telemetry streams */
+/* Monospace & Tabular figures for telemetry streams */
 .tabular-data {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
 }
 
-/* Tactical Panel Frame */
+/* Tactical Panel Frame on Dark Navy */
 .tactical-panel {
-  background-color: rgba(10, 15, 29, 0.85);
+  background-color: rgba(11, 17, 32, 0.95);
   border: 1px solid var(--color-cockpit-border);
   backdrop-filter: blur(8px);
 }
 
-/* High contrast custom scrollbars for mission control lists */
+/* High contrast terminal scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #060911;
+  background: #050811;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2c4a;
-  border-radius: 2px;
+  background: #1e2d4a;
+  border-radius: 1px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2d3f6b;
+  background: #22c55e;
 }
 
 /* Accessibility focus rings */
 *:focus-visible {
-  outline: 2px solid #f59e0b;
+  outline: 2px solid #22c55e;
   outline-offset: 1px;
 }

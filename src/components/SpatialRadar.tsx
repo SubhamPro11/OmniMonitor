@@ -35,16 +35,20 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full min-h-0 bg-[#050810] border border-[#1e2c4a] rounded-lg overflow-hidden flex items-center justify-center font-mono select-none"
+      className="relative w-full h-full min-h-0 bg-[#070b14] border border-[#1e2d4a] rounded overflow-hidden flex items-center justify-center font-mono select-none"
     >
       {/* HUD Radial Overlays */}
       <svg viewBox="0 0 600 600" className="w-full h-full max-h-full object-contain">
-        {/* Background Grid Lines */}
+        {/* Background Radial Glow */}
         <defs>
           <radialGradient id="radarGridGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#0f1f38" stopOpacity="0.6" />
-            <stop offset="85%" stopColor="#050810" stopOpacity="0.95" />
+            <stop offset="0%" stopColor="#101a33" stopOpacity="0.75" />
+            <stop offset="85%" stopColor="#070b14" stopOpacity="0.98" />
           </radialGradient>
+          <filter id="limeGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
         </defs>
 
         <rect width="600" height="600" fill="url(#radarGridGlow)" />
@@ -59,14 +63,14 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
                 cy={centerY}
                 r={rPx}
                 fill="none"
-                stroke="#172642"
+                stroke="#172440"
                 strokeWidth="1"
                 strokeDasharray={radiusM % 10 === 0 ? "4 4" : "2 6"}
               />
               <text
                 x={centerX + rPx + 4}
                 y={centerY - 4}
-                fill="#3b5278"
+                fill="#475569"
                 fontSize="9"
                 fontFamily="monospace"
               >
@@ -77,8 +81,8 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
         })}
 
         {/* Crosshair Axes */}
-        <line x1="0" y1={centerY} x2="600" y2={centerY} stroke="#172642" strokeWidth="1" />
-        <line x1={centerX} y1="0" x2={centerX} y2="600" stroke="#172642" strokeWidth="1" />
+        <line x1="0" y1={centerY} x2="600" y2={centerY} stroke="#172440" strokeWidth="1" />
+        <line x1={centerX} y1="0" x2={centerX} y2="600" stroke="#172440" strokeWidth="1" />
 
         {/* Landing Zones */}
         {/* LZ-ALPHA (Center) */}
@@ -87,8 +91,8 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
             cx={toSvgX(0)}
             cy={toSvgY(0)}
             r={18}
-            fill="#06221d"
-            stroke="#10b981"
+            fill="rgba(34, 197, 94, 0.08)"
+            stroke="#22c55e"
             strokeWidth="1.5"
             strokeDasharray="3 3"
           />
@@ -96,21 +100,22 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
             x={toSvgX(0)}
             y={toSvgY(0) + 3}
             textAnchor="middle"
-            fill="#34d399"
+            fill="#4ade80"
             fontSize="9"
             fontWeight="bold"
+            fontFamily="monospace"
           >
             LZ-A
           </text>
         </g>
 
-        {/* LZ-PERIMETER (25m, 25m) */}
+        {/* LZ-PERIMETER (24m, 24m) */}
         <g>
           <circle
             cx={toSvgX(24)}
             cy={toSvgY(24)}
             r={20}
-            fill="#1c1608"
+            fill="rgba(245, 158, 11, 0.08)"
             stroke="#f59e0b"
             strokeWidth="1.5"
             strokeDasharray="3 3"
@@ -122,6 +127,7 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
             fill="#fbbf24"
             fontSize="9"
             fontWeight="bold"
+            fontFamily="monospace"
           >
             LZ-P
           </text>
@@ -136,9 +142,10 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
                 .map((wp) => `${toSvgX(wp.x)},${toSvgY(wp.y)}`)
                 .join(" ")}
               fill="none"
-              stroke="#38bdf8"
+              stroke="#22c55e"
               strokeWidth="2.5"
               strokeDasharray="4 4"
+              filter="url(#limeGlow)"
             />
             {/* Draw Waypoint Markers */}
             {previewFix.waypoints.map((wp, idx) => (
@@ -147,8 +154,8 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
                 cx={toSvgX(wp.x)}
                 cy={toSvgY(wp.y)}
                 r={idx === 0 || idx === previewFix.waypoints.length - 1 ? 5 : 3.5}
-                fill={idx === previewFix.waypoints.length - 1 ? "#10b981" : "#38bdf8"}
-                stroke="#060911"
+                fill={idx === previewFix.waypoints.length - 1 ? "#22c55e" : "#86efac"}
+                stroke="#070b14"
                 strokeWidth="1.5"
               />
             ))}
@@ -171,9 +178,9 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
             intY = toSvgY(d.intended_position.y ?? 0);
           }
 
-          // Color definition
-          const color = isCritical ? "#ef4444" : isWarning ? "#f59e0b" : "#10b981";
-          const glowColor = isCritical ? "#7f1d1d" : isWarning ? "#78350f" : "#064e3b";
+          // Dark Navy / Lime-Green Terminal Status Palette
+          const color = isCritical ? "#ef4444" : isWarning ? "#f59e0b" : "#22c55e";
+          const glowColor = isCritical ? "#450a0a" : isWarning ? "#451a03" : "#052e16";
 
           return (
             <g
@@ -201,7 +208,7 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
                   y1={actY}
                   x2={intX}
                   y2={intY}
-                  stroke={isCritical ? "#ef4444" : isWarning ? "#f59e0b" : "#64748b"}
+                  stroke={isCritical ? "#ef4444" : isWarning ? "#f59e0b" : "#22c55e"}
                   strokeWidth="1.2"
                   strokeDasharray="2 2"
                 />
@@ -214,8 +221,8 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
                   cy={actY}
                   r="14"
                   fill="none"
-                  stroke="#38bdf8"
-                  strokeWidth="1.5"
+                  stroke="#22c55e"
+                  strokeWidth="1.8"
                   className="animate-pulse"
                 />
               )}
@@ -235,9 +242,10 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
                 x={actX}
                 y={actY - 9}
                 textAnchor="middle"
-                fill={isSelected ? "#38bdf8" : "#cbd5e1"}
+                fill={isSelected ? "#4ade80" : "#cbd5e1"}
                 fontSize="9"
                 fontWeight={isSelected ? "bold" : "normal"}
+                fontFamily="monospace"
                 className="pointer-events-none"
               >
                 {d.drone_id.replace("DRONE-", "D")}
@@ -248,15 +256,15 @@ export const SpatialRadar: React.FC<SpatialRadarProps> = ({
       </svg>
 
       {/* Radar Overlay Controls Badge */}
-      <div className="absolute top-2 left-2 bg-[#060911]/90 border border-[#1e2c4a] px-2.5 py-1 rounded text-[10px] text-slate-400 font-mono">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>SPATIAL RADAR (50m SWARM CEILING)</span>
+      <div className="absolute top-2 left-2 bg-[#0b1120] border border-[#1e2d4a] px-2 py-0.5 text-[10px] text-slate-300 font-mono">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2 h-2 bg-[#22c55e] animate-pulse" />
+          <span className="text-[#4ade80] font-bold">[ SPATIAL RADAR • 50m CEILING ]</span>
         </div>
       </div>
 
-      <div className="absolute bottom-2 right-2 bg-[#060911]/90 border border-[#1e2c4a] px-2 py-0.5 rounded text-[9px] text-slate-500 font-mono">
-        GRID: 5m CONCENTRIC • TAP DRONE TO INSPECT
+      <div className="absolute bottom-2 right-2 bg-[#0b1120] border border-[#1e2d4a] px-2 py-0.5 text-[9px] text-[#64748b] font-mono">
+        [ GRID: 5m CONCENTRIC • TAP DRONE ]
       </div>
     </div>
   );

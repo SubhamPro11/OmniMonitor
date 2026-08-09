@@ -94,26 +94,26 @@ export default function MonitoringPage() {
   const showTimeSec = ((snapshot?.current_show_time_ms || 0) / 1000).toFixed(1);
 
   return (
-    <main className="min-h-screen bg-[#060911] text-slate-100 p-4 md:p-8 max-w-[1600px] mx-auto flex flex-col gap-6">
+    <main className="min-h-screen bg-[#1e1e1e] text-[#f0f6fc] p-4 md:p-8 max-w-[1600px] mx-auto flex flex-col gap-6">
       {/* Header Bar */}
-      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#1e2c4a] pb-4">
+      <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#333333] pb-4">
         <div>
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="text-xs font-mono text-slate-400 hover:text-amber-400 border border-slate-700 bg-slate-900 px-2 py-1 rounded transition-colors"
+              className="text-xs font-mono text-[#94a3b8] hover:text-[#4ade80] border border-[#1e2d4a] bg-[#10192e] px-2 py-1 rounded transition-colors"
             >
               ← Overview
             </Link>
-            <h1 className="text-xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-emerald-400 animate-pulse" />
+            <h1 className="text-xl font-bold tracking-tight text-[#f1f5f9] flex items-center gap-2">
+              <Activity className="w-5 h-5 text-[#22c55e] animate-pulse" />
               Sync & Live Health Monitoring Engine
-              <span className="text-xs font-mono px-2 py-0.5 rounded bg-emerald-950/40 text-emerald-300 border border-emerald-800/50">
+              <span className="text-xs font-mono px-2 py-0.5 rounded bg-[#22c55e]/10 text-[#4ade80] border border-[#22c55e]/30">
                 SECTION 4
               </span>
             </h1>
           </div>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-[#94a3b8] mt-1">
             Real-time intended vs. actual trajectory comparison, spatial drift measurement, and weighted composite health scoring (0-100).
           </p>
         </div>
@@ -122,14 +122,14 @@ export default function MonitoringPage() {
         <div className="flex items-center gap-2">
           <Link
             href="/import-show"
-            className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition-colors flex items-center gap-1.5"
+            className="px-3 py-1.5 bg-[#10192e] hover:bg-[#17233f] text-[#f1f5f9] text-xs font-mono rounded border border-[#1e2d4a] transition-colors flex items-center gap-1.5"
           >
-            <FileCode className="w-3.5 h-3.5 text-amber-400" />
+            <FileCode className="w-3.5 h-3.5 text-[#4ade80]" />
             Show Importer
           </Link>
           <Link
             href="/test-telemetry"
-            className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition-colors"
+            className="px-3 py-1.5 bg-[#10192e] hover:bg-[#17233f] text-[#f1f5f9] text-xs font-mono rounded border border-[#1e2d4a] transition-colors"
           >
             Raw Telemetry Table →
           </Link>
@@ -139,14 +139,14 @@ export default function MonitoringPage() {
       {/* Top Show Clock & Fleet Status Ribbon */}
       <section className="grid grid-cols-1 md:grid-cols-4 gap-4 font-mono">
         {/* Show Timeline & Clock Control */}
-        <div className="bg-[#0a0f1d] border border-[#1e2c4a] p-3.5 rounded flex flex-col justify-between">
-          <div className="flex items-center justify-between text-[11px] text-slate-400">
+        <div className="bg-[#0b1120] border border-[#1e2d4a] p-3.5 rounded flex flex-col justify-between">
+          <div className="flex items-center justify-between text-[11px] text-[#94a3b8]">
             <span>SHOW TIMELINE</span>
-            <span className="text-slate-300 font-semibold">{snapshot?.show_name || "Skybrush Vortex"}</span>
+            <span className="text-[#f1f5f9] font-semibold">{snapshot?.show_name || "Skybrush Vortex"}</span>
           </div>
-          <div className="text-2xl font-bold text-amber-400 mt-1 tabular-data flex items-baseline gap-2">
+          <div className="text-2xl font-bold text-[#4ade80] mt-1 tabular-data flex items-baseline gap-2">
             <span>{showTimeSec}s</span>
-            <span className="text-xs text-slate-500 font-normal">
+            <span className="text-xs text-[#666666] font-normal">
               / {((snapshot?.show_duration_ms || 60000) / 1000).toFixed(0)}s duration
             </span>
           </div>
